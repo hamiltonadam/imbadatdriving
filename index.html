@@ -30,6 +30,8 @@
   #chromosome-image {
     display: none;
     margin-top: 20px;
+    width: 300px; /* Set a default width */
+    height: auto; /* Maintain aspect ratio */
   }
 </style>
 </head>
@@ -39,7 +41,7 @@
 <button class="btn" onclick="response('LOL WHAT')">LOL WHAT</button>
 
 <!-- Image that will appear when 'I KNOW' or 'LOL WHAT' button is clicked -->
-<img id="chromosome-image" src="" alt="Chromosome" width="150">
+<img id="chromosome-image" src="" alt="Chromosome">
 
 <script>
 function response(answer) {
