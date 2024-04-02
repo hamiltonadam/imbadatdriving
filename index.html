@@ -27,17 +27,31 @@
   .btn:hover {
     background-color: #0056b3;
   }
+  #chromosome-image {
+    display: none;
+    margin-top: 20px;
+  }
 </style>
 </head>
 <body>
 <div class="question">Do you think you have more chromosomes than me?</div>
-<button class="btn" onclick="response('I KNOW I GOT MORE CHROMOSOMES THAN YEW')">I KNOW I GOT MORE CHROMOSOMES THAN YEW</button>
+<button class="btn" onclick="response('I KNOW')">I KNOW</button>
 <button class="btn" onclick="response('LOL WHAT')">LOL WHAT</button>
+
+<!-- Image that will appear when 'I KNOW' or 'LOL WHAT' button is clicked -->
+<img id="chromosome-image" src="" alt="Chromosome" width="150">
 
 <script>
 function response(answer) {
-  alert("Your answer is: " + answer);
-  // You can perform further actions based on the user's response here
+  if (answer === 'I KNOW') {
+    document.getElementById('chromosome-image').src = 'https://github.com/hamiltonadam/imbadatdriving/raw/main/placeholder.png';
+    document.getElementById('chromosome-image').style.display = 'block';
+  } else if (answer === 'LOL WHAT') {
+    document.getElementById('chromosome-image').src = 'https://github.com/hamiltonadam/imbadatdriving/raw/main/sam.png';
+    document.getElementById('chromosome-image').style.display = 'block';
+  } else {
+    document.getElementById('chromosome-image').style.display = 'none';
+  }
 }
 </script>
 </body>
